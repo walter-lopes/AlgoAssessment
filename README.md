@@ -18,14 +18,13 @@ This repository consists of 4 challenges, but you only need to choose 3 that you
 Check if 2 words are anagrams of one another.
 
 ## 2. Equivalence index
-Find the equivalence index. This is the index where the sum of all the items to the left of the index, 
-are equal to the sum of all the items to the right of the index.
+Find the index where the sum of all the items to the left of the index, are equal to the sum of all the items to the right of the index.
 
 ## 3. Format numbers
 Convert an integer into a string representation formatted with comma's every 3 digits, without using
 any of the string formatting functions.
 
 ## 4. Vowel count
-Count all the vowels in each word or sentence.
+Count all the vowels in the given word or sentence.
 
 

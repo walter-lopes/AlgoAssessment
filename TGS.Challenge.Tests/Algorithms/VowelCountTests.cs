@@ -1,7 +1,8 @@
 using System;
+using TGS.Challenge.Algorithms;
 using Xunit;
 
-namespace TGS.Challenge.Tests
+namespace TGS.Challenge.Tests.Algorithms
 {
   public class VowelCountTests
   {

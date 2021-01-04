@@ -1,4 +1,4 @@
-namespace TGS.Challenge
+namespace TGS.Challenge.Algorithms
 {
   /*
        Given a zero-based integer array of length N, the equivalence index (i) is the index where the sum of all the items to the left of the index

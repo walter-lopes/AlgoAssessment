@@ -1,6 +1,6 @@
 using System;
 
-namespace TGS.Challenge
+namespace TGS.Challenge.Algorithms
 {
     /*
         Devise a function that takes a string & returns the number of 

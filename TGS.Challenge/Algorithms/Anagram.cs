@@ -1,4 +1,4 @@
-namespace TGS.Challenge
+namespace TGS.Challenge.Algorithms
 {
   /*
         Devise a function that checks if 1 word is an anagram of another, if the words are anagrams of

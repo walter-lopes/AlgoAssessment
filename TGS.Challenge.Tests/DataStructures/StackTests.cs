@@ -1,6 +1,7 @@
+using TGS.Challenge.DataStructures;
 using Xunit;
 
-namespace TGS.Challenge.Tests
+namespace TGS.Challenge.Tests.DataStructures
 {
   public class StackTests
   {

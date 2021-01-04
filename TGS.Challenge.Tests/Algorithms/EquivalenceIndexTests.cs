@@ -17,7 +17,7 @@ namespace TGS.Challenge.Tests.Algorithms
     {
         var index = _equivalenceIndex.Find(new int[] { 1, 2, 3, 4, 5, 7, 8, 10, 12 });
 
-        Assert.Equal(index, 6);
+        Assert.Equal(6, index);
     }
 
     [Fact]

@@ -1,6 +1,6 @@
 using System;
 
-namespace TGS.Challenge
+namespace TGS.Challenge.DataStructures
 {
   public class Queue<T>
   {

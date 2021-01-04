@@ -1,3 +1,5 @@
+using System;
+
 namespace TGS.Challenge
 {
   public class Stack<T>
@@ -16,11 +18,7 @@ namespace TGS.Challenge
 
     public void Push(T value)
     {
-      var temp = new T[this._items.Length];
-
-      this._items.CopyTo(temp, 0);
-      this._items = new T[temp.Length +1];
-      temp.CopyTo(this._items, 0);
+      Array.Resize(ref this._items, this._items.Length +1);
       this._items.SetValue(value, this._items.GetUpperBound(0));
     }
 
@@ -32,15 +30,8 @@ namespace TGS.Challenge
     public T Pop()
     {
       var item = (T)this._items.GetValue(this._items.GetUpperBound(0));
-      var temp = new T[this._items.Length];
 
-      this._items.CopyTo(temp, 0);
-      this._items = new T[temp.Length -1];
-
-      for (var i = 0; i < this._items.Length; i++)
-      {
-        this._items.SetValue(temp[i], i);
-      }
+      Array.Resize(ref this._items, this._items.Length -1);
 
       return item;
     }

@@ -1,3 +1,5 @@
+using System;
+
 namespace TGS.Challenge
 {
   public class Queue<T>
@@ -35,15 +37,8 @@ namespace TGS.Challenge
       }
 
       var result = (T)this._items.GetValue(this._items.GetUpperBound(0));
-      var temp = new T[this._items.Length -1];
 
-      for (var i = 0; i < temp.Length; i++)
-      {
-        temp.SetValue(this._items.GetValue(i), i);
-      }
-
-      this._items = new T[temp.Length];
-      temp.CopyTo(this._items, 0);
+      Array.Resize(ref this._items, this._items.Length -1);
 
       return result;
     }

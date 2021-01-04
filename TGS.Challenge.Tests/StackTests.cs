@@ -36,7 +36,7 @@ namespace TGS.Challenge.Tests
       var stack = new Stack<int>();
 
       stack.Push(1);
-      stack.Push(2);
+      stack.Push(3);
       
       Assert.Equal(3, stack.Peek());
       Assert.Equal(2, stack.Count);

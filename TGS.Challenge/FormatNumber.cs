@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TGS.Challenge
 {
@@ -26,7 +27,42 @@ namespace TGS.Challenge
     {
         public string Format(int value)
         {
-            return string.Empty;
+            string newString = value.ToString();
+
+            if (value < 1 || value > 1000000000)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            else if (newString.Length <= 3)
+            {
+                return newString;
+            }
+
+            int counter = 0;
+            int maxIndex = newString.Length;
+            int commasToAdd = (newString.Length / 3);
+           
+
+            while (commasToAdd >= 0)
+            {
+                counter += 1;
+                int commaPlacement = 3 * counter;
+
+                int delimiterIndex = maxIndex - commaPlacement;
+                bool isValidIndex = delimiterIndex > 0;
+
+                if (isValidIndex)
+                {
+                    var valueFromDelimiterIndex = newString[delimiterIndex].ToString();
+
+                    newString = $"{newString.Substring(0, delimiterIndex)},{valueFromDelimiterIndex}{newString[(delimiterIndex + 1)..]}";
+                }
+
+                commasToAdd -= 1;
+            }
+
+            return newString;
         }
     }
 }
